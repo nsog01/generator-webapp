@@ -1,0 +1,15 @@
+{
+  "name": "Employee_Department",
+  "properties": {
+    "emp_code": {
+      "type": "string",
+      "required": true,
+      "unique":false
+    },
+    "dep_code": {
+      "type": "number",
+      "required": true,
+      "unique":false
+    }
+  }
+}
