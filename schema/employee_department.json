@@ -2,12 +2,12 @@
   "name": "Employee_Department",
   "properties": {
     "emp_code": {
-      "type": "string",
+      "type": "String",
       "required": true,
       "unique":false
     },
     "dep_code": {
-      "type": "number",
+      "type": "Integer",
       "required": true,
       "unique":false
     }

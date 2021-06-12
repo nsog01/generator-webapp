@@ -5,7 +5,7 @@ import json
 schema_folder = './schema/'
 models_folder = './models/'
 templates_folder = './templates/'
-models_template_file = 'Models.tpl'
+models_template_file = 'models.tpl'
 
 
 def charger_fichier(nomfichier):

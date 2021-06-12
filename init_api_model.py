@@ -3,15 +3,11 @@ import json
 
 
 schema_folder = './schema/'
-resources_folder = './resources/'
+apiModel_folder = './apiModels/'
 templates_folder = './templates/'
-resources_template_file = 'resources.tpl'
+apiModel_template_file = 'apiModels.tpl'
 
 
-
-dic = {"String":"str", "Integer":"int", "true":"True", "false":"False"}
-
-    
 def charger_fichier(nomfichier):
    with open(nomfichier,'r') as fp:
      r = fp.read()
@@ -25,6 +21,6 @@ from jinja2 import Environment, FileSystemLoader
 env = Environment(loader=FileSystemLoader(templates_folder))
 
 for i in range(len(ll)):
-  template = env.get_template(resources_template_file)
-  with open(resources_folder+ll[i]['name']+'.py', "w") as fh:
-     fh.write(template.render(data=ll[i], dic=dic))
+  template = env.get_template(apiModel_template_file)
+  with open(apiModel_folder+ll[i]['name']+'.py', "w") as fh:
+     fh.write(template.render(data=ll[i]))
